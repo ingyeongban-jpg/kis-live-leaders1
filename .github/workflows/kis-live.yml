@@ -1,0 +1,35 @@
+name: KIS Live Leaders
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '55 22 * * 0-4'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 145
+
+    env:
+      KIS_APP_KEY: ${{ secrets.KIS_APP_KEY }}
+      KIS_APP_SECRET: ${{ secrets.KIS_APP_SECRET }}
+      SCAN_SEC: '20'
+      RUN_MINUTES: '130'
+      TOP_N: '10'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install
+        run: pip install requests
+
+      - name: Run KIS scanner
+        run: python kis_github_scanner.py
