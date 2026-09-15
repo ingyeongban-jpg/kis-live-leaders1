@@ -1,0 +1,9 @@
+CHATGPT TRIGGER TEST
+source=kiwoom-simulator
+ticker=005930
+name=삼성전자
+detected_at=2026-09-16 05:00 KST
+price=TEST_ONLY
+volume_change=TEST_ONLY
+turnover_change=TEST_ONLY
+signal=This is a synthetic test signal. Do not treat as a real trading signal.
