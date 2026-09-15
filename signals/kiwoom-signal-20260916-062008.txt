@@ -1,0 +1,9 @@
+KIWOOM SIGNAL TEST
+source=home-pc
+detected_at=2026-09-16 06:20:08 KST
+ticker=TEST_ONLY
+name=TEST_ONLY
+price=TEST_ONLY
+volume_change=TEST_ONLY
+turnover_change=TEST_ONLY
+signal=PC to GitHub to ChatGPT Work automatic relay test.
